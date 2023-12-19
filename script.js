@@ -1,3 +1,24 @@
+$(window).scroll(function(){
+    var wScroll = $(this).scrollTop();
+    console.log(wScroll);
+    $('.bg').css({
+        'transform' : 'translate(0px, '+ wScroll/8 +'%)'
+    });
+    $('.bg2').css({
+        'transform' : 'translate(0px, '+ wScroll/8 +'%)'
+    });
+    $('.bg3').css({
+        'transform' : 'translate(0px, '+ wScroll/18 +'%)'
+    });
+    $('.bg4').css({
+        'transform' : 'translate(0px, '+ wScroll/26 +'%)'
+    });
+});
+let text = document.getElementById('text');
+window.addEventListener('scroll', ()=> {
+    let value = window.scrollY;
+    text.style.marginTop = value * 2.5 + 'px';
+});
 var cs = document.querySelector("#cursor");
 var cs2 = document.querySelector("#cursor-blur");
 document.addEventListener("mousemove", function(e){
